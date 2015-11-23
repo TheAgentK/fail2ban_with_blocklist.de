@@ -5,6 +5,7 @@ filter   = blocklist
 logpath  = /var/log/blocklist-ssh.log
 maxretry = 1
 bantime  = 86400
+action = iptables[name=SSH, port=ssh, protocol=tcp]
 
 [mail-blocklist]
 enabled  = true
@@ -12,6 +13,7 @@ filter   = blocklist
 logpath  = /var/log/blocklist-mail.log
 maxretry = 1
 bantime  = 86400
+action = iptables-multiport[name="mail-blocklist", port="smtp,smtps,submission"]
 
 [imap-blocklist]
 enabled  = true
@@ -19,3 +21,4 @@ filter   = blocklist
 logpath  = /var/log/blocklist-imap.log
 maxretry = 1
 bantime  = 86400
+action = iptables-multiport[name="imap-blocklist", port="imap,imap3,imaps,pop3,pop3s,4190"]
