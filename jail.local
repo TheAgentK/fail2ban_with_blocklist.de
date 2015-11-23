@@ -1,0 +1,21 @@
+[ssh-blocklist]
+enabled  = true
+port     = ssh
+filter   = blocklist
+logpath  = /var/log/blocklist-ssh.log
+maxretry = 1
+bantime  = 86400
+
+[mail-blocklist]
+enabled  = true
+filter   = blocklist
+logpath  = /var/log/blocklist-mail.log
+maxretry = 1
+bantime  = 86400
+
+[imap-blocklist]
+enabled  = true
+filter   = blocklist
+logpath  = /var/log/blocklist-imap.log
+maxretry = 1
+bantime  = 86400
