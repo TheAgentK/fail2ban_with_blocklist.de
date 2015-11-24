@@ -1,6 +1,6 @@
 # Make Fail2ban with blocklist.de better
 Idea from http://wiki.kvs1.de/doku.php?id=pimp-fail2ban-with-blocklist.de
-
+and from http://sven.rojek.de/posts/fail2ban-iprange-mit-blackliste-blocken
 
 Most admins have http://www.fail2ban.org/ in use to protect their servers.
 To get more power out of fail2ban you can combine it with http://blocklist.de
