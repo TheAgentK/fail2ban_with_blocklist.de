@@ -45,3 +45,9 @@ Call the script each hour to fetch the last IP list for SSH
 ```
 tail -f /var/log/auth.log /var/log/fail2ban.log
 ```
+
+## Check Banned IP's Linux
+Use the grep command as follows to verify that an IP address 1.2.3.4 is blocked or not:
+```
+iptables -L INPUT -v -n | grep "1.2.3.4"
+```
