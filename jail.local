@@ -22,3 +22,46 @@ logpath  = /var/log/blocklist-imap.log
 maxretry = 1
 bantime  = 86400
 action = iptables-multiport[name="imap-blocklist", port="imap,imap3,imaps,pop3,pop3s,4190"]
+
+
+# IP-Range mit Blackliste blocken
+
+[ip-blacklist]
+enabled   = true
+port      = anyport
+action = action_ip-blacklist
+filter    = filter_ip-blacklist
+logpath   = /var/log/fail2ban-blacklist
+maxretry  = 0
+findtime  = 15552000
+bantime   = -1
+
+[ip-blacklist24]
+enabled   = true
+port      = anyport
+action    = action_ip-blacklist[mask=24]
+filter    = filter_ip-blacklist24
+logpath   = /var/log/fail2ban-blacklist
+maxretry  = 0
+findtime  = 15552000
+bantime   = -1
+
+[ip-blacklist16]
+enabled   = true
+port      = anyport
+action    = action_ip-blacklist[mask=16]
+filter    = filter_ip-blacklist16
+logpath   = /var/log/fail2ban-blacklist
+maxretry  = 0
+findtime  = 15552000
+bantime   = -1
+
+[ip-blacklist8]
+enabled   = true
+port      = anyport
+action    = action_ip-blacklist[mask=8]
+filter    = filter_ip-blacklist8
+logpath   = /var/log/fail2ban-blacklist
+maxretry  = 0
+findtime  = 15552000
+bantime   = -1
