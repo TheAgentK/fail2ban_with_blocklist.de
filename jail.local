@@ -31,7 +31,7 @@ enabled   = true
 port      = anyport
 action = action_ip-blacklist
 filter    = filter_ip-blacklist
-logpath   = /var/log/fail2ban-blacklist
+logpath   = /var/log/fail2ban.blacklist
 maxretry  = 0
 findtime  = 15552000
 bantime   = -1
@@ -41,7 +41,7 @@ enabled   = true
 port      = anyport
 action    = action_ip-blacklist[mask=24]
 filter    = filter_ip-blacklist24
-logpath   = /var/log/fail2ban-blacklist
+logpath   = /var/log/fail2ban.blacklist
 maxretry  = 0
 findtime  = 15552000
 bantime   = -1
@@ -51,7 +51,7 @@ enabled   = true
 port      = anyport
 action    = action_ip-blacklist[mask=16]
 filter    = filter_ip-blacklist16
-logpath   = /var/log/fail2ban-blacklist
+logpath   = /var/log/fail2ban.blacklist
 maxretry  = 0
 findtime  = 15552000
 bantime   = -1
@@ -61,7 +61,7 @@ enabled   = true
 port      = anyport
 action    = action_ip-blacklist[mask=8]
 filter    = filter_ip-blacklist8
-logpath   = /var/log/fail2ban-blacklist
+logpath   = /var/log/fail2ban.blacklist
 maxretry  = 0
 findtime  = 15552000
 bantime   = -1
